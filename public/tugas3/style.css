@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 228, 187);
+}
+
+.hover{
+    transition: all .35s ease;
+}
+
+.hover:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button:focus{
+    transform: scale(1.1);
+}
+
+@media (max-width:576px) {
+    .header-title{
+    font-size: 26px;
+    }
+}

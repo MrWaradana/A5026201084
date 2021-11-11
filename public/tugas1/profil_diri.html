@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Profil Mahasiswa">
+    <meta name="keywords" content="Profil, Mahasiswa">
+    <meta name="author" content="Muhammad Ridho Waradana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <style>
+        *{
+            font-family: 'lucida sans',sans-serif;
+        }
+        header,#hobi,h3,#random{
+            text-align:center;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+        }
+        table,td{
+            border: 2px solid grey;
+        }
+        p{
+            margin: 16px 25vw;
+        }
+    </style>
+    <link rel="icon" href="foto_ridho.jpeg">
+</head>
+<body>
+    <!-- header start -->
+    <header>
+        <nav>
+            <hr>
+            <a href="#profil">Profil</a>
+            <a href="#tentang">Tentang saya</a>
+            <a href="#hobi">Hobi</a><br><br>
+            <input type="text" placeholder="search..">
+            <button type="submit">Cari!</button>
+            <hr>
+        </nav>
+        <div class="title">
+            <h1>PROFIL MAHASISWA</h1>
+        </div>
+        <div class="foto-profil">
+            <img src="foto_ridho.jpeg" alt="" width="auto" height="300">
+        </div>
+        <h2>MUHAMMAD <span style="color: rgb(3, 15, 15);" title="nama panggilan">RIDHO</span> WARADANA</h2>
+    </header>
+
+    <!-- profil start -->
+    <main id="profil">
+            <table>
+                <tr>
+                    <td><b>Nama lengkap</b></td>
+                    <td> <b>:</b> </td>
+                    <td>Muhammad Ridho Waradana</td>
+                </tr>
+                <tr>
+                    <td><b>Perguruan tinggi</b></td>
+                    <td> <b>:</b> </td>
+                    <td>Institut Teknologi Sepuluh Nopember</td>
+                </tr>
+                <tr>
+                    <td><b>Fakultas</b></td>
+                    <td> <b>:</b> </td>
+                    <td>Fakultas Teknologi Elektro dan Informatika Cerdas</td>
+                </tr>
+                <tr>
+                    <td><b>Departemen</b></td>
+                    <td> <b>:</b> </td>
+                    <td>Sistem Informasi</td>
+                </tr>
+                <tr>
+                    <td><b>Nomor pokok</b></td>
+                    <td> <b>:</b> </td>
+                    <td>5026201084</td>
+                </tr>
+                <tr>
+                    <td><b>Tempat, tanggal lahir</b></td>
+                    <td> <b>:</b> </td>
+                    <td>Jakarta, 01 Oktober 2002</td>
+                </tr>
+                <tr>
+                    <td><b>Alamat</b></td>
+                    <td> <b>:</b> </td>
+                    <td>
+                        <address>
+                            Jln. Kecubung raya No. 18 <br>
+                            Duren Sawit Jakarta Timur <br>
+                            DKI Jakarta <br>
+                            13440
+                        </address>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Agama</b></td>
+                    <td> <b>:</b> </td>
+                    <td>Islam</td>
+                </tr>
+                <tr>
+                    <td><b>No. Telepon</b></td>
+                    <td> <b>:</b> </td>
+                    <td><a href="https://wa.me/6281219151401" target="_blank">081219151401</a></td>
+                </tr>
+                <tr>
+                    <td><b>Jenis kelamin</b></td>
+                    <td> <b>:</b> </td>
+                    <td>Laki - laki</td>
+                </tr>
+                <tr>
+                    <td><b>Kewarganegaraan <b>:</b></b></td>
+                    <td> <b>:</b> </td>
+                    <td>Indonesia</td>
+                </tr>
+            </table>
+    </main>
+
+    <!-- tentang start -->
+    <div id="tentang">
+        <h3>Tentang saya</h3>
+        <p>I like new stuff related to technology. I have a passion on music too. I am a fast
+            learner and a persevering person. Every problem I faced, I always find the most
+            efficient and effective solutions. I am currently pursuing my education for
+            bachelors degree at the Institut Teknologi Sepuluh Nopember, Department of
+            Information System. Currently, I'm learning to become a Front-end Developer</p>
+    </div>
+
+    <!-- hobi start -->
+    <div id="hobi">
+        <h3>Hobi saya</h3>
+        <p>Saya suka mendengarkan lagu!</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/13ARO0HDZsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        <audio controls src="Leave The Door Open by Silk Sonic (Anderson Paak Drum Transcription).mp3" type="audio/mpeg"></audio>
+        <p>Menonton Film!</p>
+        <a href="https://www.netflix.com/"><img src="Netflix_2015_logo.svg" alt="logo netflix" width="500"
+            height="auto"></a>
+        <p>Bermain Video Game!</p>
+        <a href="https://playvalorant.com/id-id/"><img src="valorant-logo-1.png" alt="logo valorant" width="250"><br><caption>Valorant!</caption></a>
+        
+    </div>
+
+    <div id="random" style="text-align: center;">
+        <h3>Di bawah ini adalah komponen random yang ada di html!</h3>
+        <button>Klik Disini!</button><br>
+        <input type="time"><br>
+        <select name="angka" id="" style="width: 250px;text-align: center;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select><br>
+        <textarea name="Komentar" placeholder="Ketik apapun disini..." id="" cols="80" rows="10"></textarea>
+        <p>Pilih salah satu dibawah ini!</p>
+        <form action="#">
+              <input type="radio" id="html" name="fav_language" value="HTML">
+              <label for="html">HTML</label><br>
+              <input type="radio" id="css" name="fav_language" value="CSS">
+              <label for="css">CSS</label><br>
+              <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+              <label for="javascript">JavaScript</label><br><br>
+              <input type="submit" value="Submit">
+        </form>
+
+    </div>
+    <hr>
+    <!-- footer start -->
+    <footer style="text-align: center;">
+        <h2>Hubungi saya</h2>
+        <a href="https://wa.me/6281219151401" target="_blank">081219151401</a>
+        <p>Made with &hearts; by <a href="https://github.com/MrWaradana">MrWaradana</a> </p>
+        <p>&copy;2021</p>
+    </footer>
+
+</body>
+</html>
