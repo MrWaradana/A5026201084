@@ -90,10 +90,11 @@
                     <a href="/tugas2/profil_diri.html">Tugas 2</a>
                     <a href="/tugas3/index.html">Tugas 3</a>
                     <a href="/praktikum1/index.html">Praktikum 1</a>
-                    <a href="#">Tugas 4</a>
+                    <a href="/tugas4">Tugas 4</a>
                     <a href="/praktikum2">Praktikum 2</a>
-                    <a href="/isiannama">ETS</a>
-                    <a href="#">Tugas PHP</a>
+                    <a href="/ets">ETS</a>
+                    <a href="/tugasphp">Tugas PHP</a>
+                    <a href="/isiannama">Isian Nama</a>
                 </div>
             </div>
         </div>
