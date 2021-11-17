@@ -31,6 +31,8 @@ Route::post('greetings',"ViewController@resultGreetings");
 
 // route ets
 Route::get('ets',"ViewController@showETS");
+// Route::post('ets',"ViewController@showETS");
 
 // route tugas php
 Route::get('tugasphp',"ViewController@showTugasPHP");
+Route::post('tugasphp',"ViewController@showTugasPHP");
