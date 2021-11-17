@@ -57,6 +57,7 @@ if (!isset($_POST['playerChoice'])) {
               justify-content-center
             ">
           <form method="post">
+              @csrf
             <button class="btn btn-primary m-2 px-4 py-2" name="playerChoice" value="Rock" title="Rock" type="submit">
               <i class="fas fa-hand-rock"></i>
             </button>

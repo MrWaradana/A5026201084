@@ -33,6 +33,7 @@
 
             <!-- form vaksin -->
             <form action="https://getbootstrap.com/docs/4.6/components/forms/" class="needs-validation px-sm-1 pb-sm-1" novalidate>
+                @csrf
                 <h1 class="form-title text-center my-4">
                     Form Input Peserta Vaksinasi
                 </h1>
