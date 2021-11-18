@@ -36,3 +36,7 @@ Route::get('ets',"ViewController@showETS");
 // route tugas php
 Route::get('tugasphp',"ViewController@showTugasPHP");
 Route::post('tugasphp',"ViewController@showTugasPHP");
+
+//ajax load groceries
+Route::view('/grocery', 'grocery');
+Route::post('/grocery/post', 'GroceryController@store');
