@@ -31,6 +31,28 @@
         </div>
     </section>
 
+    <script>
+        $(document).ready(function(){
+        $("#video-btn").click(function(){
+        $("#content1").load("tugas4/embed-videos.html #embed-videos", function(responseTxt, statusTxt, xhr){
+            if(statusTxt == "success")
+            alert("External content loaded successfully!");
+            if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+        });
+        $("#comments-btn").click(function(){
+        $("#content2").load("tugas4/embed-videos.html #comments", function(responseTxt, statusTxt, xhr){
+            if(statusTxt == "success")
+            alert("External content loaded successfully!");
+            if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+        });
+    });
+
+    </script>
+
 
 </body>
 </html>
