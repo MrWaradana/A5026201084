@@ -94,7 +94,9 @@
                     <a href="/praktikum2">Praktikum 2</a>
                     <a href="/ets">ETS</a>
                     <a href="/tugasphp">Tugas PHP</a>
-                    <a href="/isiannama">Isian Nama</a>
+                    <a href="/isiannama">Isian Nama</a><br><br>
+                    <a href="/pegawai">Tabel Pegawai</a>
+                    <a href="/tugas">Tabel Tugas (Tugas 25 Nov 2021)</a>
                 </div>
             </div>
         </div>
