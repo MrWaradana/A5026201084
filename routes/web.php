@@ -41,7 +41,7 @@ Route::post('tugasphp',"ViewController@showTugasPHP");
 Route::view('/grocery', 'grocery');
 Route::post('/grocery/post', 'GroceryController@store');
 
-//route CRUD
+//route CRUD pegawai
 Route::get('/pegawai','PegawaiController@index');
 Route::get('/pegawai/tambah','PegawaiController@tambah');
 
@@ -52,5 +52,15 @@ Route::post('/pegawai/update','PegawaiController@update');
 
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 
+//route CRUD tugas
+Route::get('/tugas','TugasController@index');
+Route::get('/tugas/tambah','TugasController@tambah');
+
+Route::post('/tugas/store','TugasController@store');
+
+Route::get('/tugas/edit/{id}','TugasController@edit');
+Route::post('/tugas/update','TugasController@update');
+
+Route::get('/tugas/hapus/{id}','TugasController@hapus');
 
 
