@@ -26,16 +26,6 @@
                         </span>
                     </div>
                 </div>
-                <script type="text/javascript">
-                    $(function() {
-                        $('#dtpickerdemo').datetimepicker({
-                            format: 'YYYY-MM-DD hh:mm:ss',
-                            showTodayButton: false,
-                            locale : 'id',
-                            "defaultDate": new Date(),
-                        });
-                    });
-                </script>
 
                 Status <br />
                 <input type="radio" id="Hadir" name="status" value="H" @if ($a->Status === "H" ) checked="checked" @endif>

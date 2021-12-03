@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Edit Pegawai</h3>
+@section('title', 'Edit Pegawai')
+@section('judulhalaman', 'Edit Data Pegawai')
 
-	<a href="/pegawai"> Kembali</a>
+@section('konten')
 
-	<br/>
-	<br/>
 
 	@foreach($pegawai as $p)
 	<form action="/pegawai/update" method="post">
@@ -25,6 +18,6 @@
 	</form>
 	@endforeach
 
+    <h2><a href="/pegawai"> Kembali</a></h2>
 
-</body>
-</html>
+@endsection

@@ -26,6 +26,17 @@
 
     @show
 
+    @yield('script')
+    <script type="text/javascript">
+        $(function() {
+            $('#dtpickerdemo').datetimepicker({
+                format: 'YYYY-MM-DD HH:mm:ss',
+                showTodayButton: false,
+                locale : 'id',
+                "defaultDate": new Date(),
+            });
+        });
+    </script>
 </body>
 
 </html>

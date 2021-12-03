@@ -1,17 +1,11 @@
-<html>
-<head>
-	<title>Tabel Tugas</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h1>Tugas PWEB 25 Nov 2021</h1>
-	<h2>5026201084 - Muhammad Ridho Waradana - PWEB A</h2>
-	<h3>Tabel Tugas</h3>
+@section('title', 'Tabel Tugas')
 
+@section('judulhalaman', 'Tabel Tugas')
+
+@section('konten')
 	<a href="/tugas/tambah"> + Tambah Tugas Baru</a>
-
-	<br/>
-	<br/>
 
 	<table border="1">
 		<tr>
@@ -35,6 +29,4 @@
 		@endforeach
 	</table>
 
-
-</body>
-</html>
+@endsection

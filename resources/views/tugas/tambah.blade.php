@@ -1,27 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h1>Tugas PWEB 25 Nov 2021</h1>
-	<h2>5026201084 - Muhammad Ridho Waradana - PWEB A</h2>
-	<h3>Data Tugas</h3>
+@section('title', 'Tambah Tugas')
 
+@section('judulhalaman', 'Tambah Tugas')
+
+@section('konten')
 	<a href="/tugas"> Kembali</a>
 
-	<br/>
-	<br/>
 
 	<form action="/tugas/store" method="post">
 		{{ csrf_field() }}
-		IDPegawai <input type="text" name="IDPegawai" required="required"> <br/>
-		Tanggal <input type="datetime-local" max name="Tanggal" required="required"> <br/>
+
+        {{-- select pegawai starts here --}}
+        <label for="IDPegawai">IDPegawai:</label>
+        <select name="IDPegawai" id="IDPegawai">
+            @foreach($pegawai as $p)
+            <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
+            @endforeach
+        </select>
+        {{-- select pegawai ends here --}}
+
+        <br>
+        {{-- datetime starts here --}}
+        <div class="form-group">
+            <label for="dtpickerdemo">Tanggal :</label>
+            <div class="input-group date col-sm-2" id="dtpickerdemo">
+                <input type="text" class="form-control" name="Tanggal" required="required" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+        {{-- datetime ends here --}}
+        <br/>
+
 		NamaTugas <input type="text" maxlength="50" name="NamaTugas" required="required"> <br/>
 		Status <input type="text" maxlength="1" name="Status" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 
-</body>
-</html>
+@endsection
