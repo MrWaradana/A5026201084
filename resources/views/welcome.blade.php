@@ -48,12 +48,64 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            @media(max-width:768px){
+                .title {
+                font-size: 3rem !important;
+            }
+            }
         </style>
 @endsection
 
 @section('konten')
+<div class="content">
+    <div class="title m-b-md">
+        Muhammad Ridho Waradana
+        5026201084
+    </div>
 
-        <div class="flex-center position-ref full-height">
+    <h1 class="title">Landing Page</h1>
+
+    <ul class="navbar-nav d-flex flex-lg-row flex-column justify-content-around">
+    <li class="nav-item active">
+        <a href="/tugas1/profil_diri.html"  class="btn btn-primary">Tugas 1</a>
+    </li>
+    <li class="nav-item">
+        <a href="/tugas2/profil_diri.html"  class="btn btn-primary">Tugas 2</a>
+    </li>
+    <li class="nav-item">
+        <a href="/tugas3/index.html"  class="btn btn-primary">Tugas 3</a>
+    </li>
+    <li class="nav-item">
+        <a href="/praktikum1/index.html"  class="btn btn-primary">Praktikum 1</a>
+    </li>
+    <li class="nav-item">
+        <a href="/tugas4"  class="btn btn-primary">Tugas 4</a>
+    </li>
+    <li class="nav-item">
+        <a href="/praktikum2"  class="btn btn-primary">Praktikum 2</a>
+    </li>
+    <li class="nav-item">
+        <a href="/ets"  class="btn btn-primary">ETS</a>
+    </li>
+    <li class="nav-item">
+        <a href="/tugasphp"  class="btn btn-primary">Tugas PHP</a>
+    </li>
+    <li class="nav-item">
+
+        <a href="/isiannama"  class="btn btn-primary">Isian Nama</a>
+    </li>
+    <li class="nav-item">
+        <a href="/pegawai"  class="btn btn-primary">Tabel Pegawai</a>
+    </li>
+    <li class="nav-item">
+
+        <a href="/tugas" class="btn btn-primary">Tabel Tugas (Tugas 25 Nov 2021)</a>
+    </li>
+  </ul>
+</div>
+
+        {{-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -68,27 +120,6 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Muhammad Ridho Waradana
-                    5026201084
-                </div>
 
-                <h1>Landing Page</h1>
-
-                <div class="links my-3">
-                    <a href="/tugas1/profil_diri.html"  class="btn btn-primary">Tugas 1</a>
-                    <a href="/tugas2/profil_diri.html"  class="btn btn-primary">Tugas 2</a>
-                    <a href="/tugas3/index.html"  class="btn btn-primary">Tugas 3</a>
-                    <a href="/praktikum1/index.html"  class="btn btn-primary">Praktikum 1</a>
-                    <a href="/tugas4"  class="btn btn-primary">Tugas 4</a>
-                    <a href="/praktikum2"  class="btn btn-primary">Praktikum 2</a>
-                    <a href="/ets"  class="btn btn-primary">ETS</a>
-                    <a href="/tugasphp"  class="btn btn-primary">Tugas PHP</a>
-                    <a href="/isiannama"  class="btn btn-primary">Isian Nama</a><br><br>
-                    <a href="/pegawai"  class="btn btn-primary">Tabel Pegawai</a>
-                    <a href="/tugas" class="btn btn-primary">Tabel Tugas (Tugas 25 Nov 2021)</a>
-                </div>
-            </div>
-        </div>
+        </div> --}}
 @endsection
