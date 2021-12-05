@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.main')
 
-        <title>Laravel</title>
+@section('title', 'Home')
 
+@section('style')
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -48,22 +45,14 @@
                 font-size: 84px;
             }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
         </style>
-    </head>
-    <body>
+@endsection
+
+@section('konten')
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -85,20 +74,21 @@
                     5026201084
                 </div>
 
-                <div class="links">
-                    <a href="/tugas1/profil_diri.html">Tugas 1</a>
-                    <a href="/tugas2/profil_diri.html">Tugas 2</a>
-                    <a href="/tugas3/index.html">Tugas 3</a>
-                    <a href="/praktikum1/index.html">Praktikum 1</a>
-                    <a href="/tugas4">Tugas 4</a>
-                    <a href="/praktikum2">Praktikum 2</a>
-                    <a href="/ets">ETS</a>
-                    <a href="/tugasphp">Tugas PHP</a>
-                    <a href="/isiannama">Isian Nama</a><br><br>
-                    <a href="/pegawai">Tabel Pegawai</a>
-                    <a href="/tugas">Tabel Tugas (Tugas 25 Nov 2021)</a>
+                <h1>Landing Page</h1>
+
+                <div class="links my-3">
+                    <a href="/tugas1/profil_diri.html"  class="btn btn-primary">Tugas 1</a>
+                    <a href="/tugas2/profil_diri.html"  class="btn btn-primary">Tugas 2</a>
+                    <a href="/tugas3/index.html"  class="btn btn-primary">Tugas 3</a>
+                    <a href="/praktikum1/index.html"  class="btn btn-primary">Praktikum 1</a>
+                    <a href="/tugas4"  class="btn btn-primary">Tugas 4</a>
+                    <a href="/praktikum2"  class="btn btn-primary">Praktikum 2</a>
+                    <a href="/ets"  class="btn btn-primary">ETS</a>
+                    <a href="/tugasphp"  class="btn btn-primary">Tugas PHP</a>
+                    <a href="/isiannama"  class="btn btn-primary">Isian Nama</a><br><br>
+                    <a href="/pegawai"  class="btn btn-primary">Tabel Pegawai</a>
+                    <a href="/tugas" class="btn btn-primary">Tabel Tugas (Tugas 25 Nov 2021)</a>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+@endsection

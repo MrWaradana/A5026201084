@@ -1,4 +1,4 @@
-@extends('layout.bahagia')
+@extends('layout.main')
 
 @section('title', 'Tambah Tugas')
 
@@ -23,12 +23,12 @@
         <br>
         {{-- datetime starts here --}}
         <div class="form-group">
-            <label for="dtpickerdemo">Tanggal :</label>
-            <div class="input-group date col-sm-2" id="dtpickerdemo">
-                <input type="text" class="form-control" name="Tanggal" required="required" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
+            <label>Tanggal dan Waktu :</label>
+            <div class="input-group date" id="reservationdatetime" data-target-input="nearest">
+                <input type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime" name="Tanggal"/>
+                <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
+                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                </div>
             </div>
         </div>
         {{-- datetime ends here --}}

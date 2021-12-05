@@ -1,4 +1,4 @@
-@extends('layout.bahagia')
+@extends('layout.main')
 
 @section('title', 'Menambah Absen')
 @section('judulhalaman', 'Menambah Data Absen')
@@ -22,12 +22,12 @@
 
         {{-- datetime starts here --}}
         <div class="form-group">
-            <label for="dtpickerdemo">Tanggal :</label>
-            <div class="input-group date col-sm-2" id="dtpickerdemo">
-                <input type="text" class="form-control" name="tanggal" required="required" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
+            <label>Tanggal dan Waktu :</label>
+            <div class="input-group date" id="reservationdatetime" data-target-input="nearest">
+                <input type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime" name="tanggal"/>
+                <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
+                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                </div>
             </div>
         </div>
         {{-- datetime ends here --}}
@@ -52,5 +52,7 @@
 
     <h2><a href="/absen"> Kembali</a></h2>
 
+
+    
 @endsection
 

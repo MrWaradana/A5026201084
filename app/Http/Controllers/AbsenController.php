@@ -14,7 +14,7 @@ class AbsenController extends Controller
         $absen = DB::table('absen')->get();
 
         // mengirim data absen ke view indexabsen
-        return view('absen.indexabsen', ['absen' => $absen]);
+        return view('absen.indexabsen', ['absen' => $absen], ["active" => "absen_aktif"]);
     }
     // method untuk menampilkan view form tambah absen
     public function add()
@@ -22,7 +22,7 @@ class AbsenController extends Controller
         // mengambil data dari table pegawai
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
         // memanggil view add
-        return view('absen.add', ['pegawai' => $pegawai]);
+        return view('absen.add', ['pegawai' => $pegawai], ["active" => "absen_aktif"]);
     }
     // method untuk insert data ke table absen
     public function store(Request $request)
@@ -49,7 +49,7 @@ class AbsenController extends Controller
         $judul = "Hallo Apa kabar" ;
 
         // passing data absen yang didapat ke view update.blade.php
-        return view('absen.edit', ['absen' => $absen,'pegawai' => $pegawai , 'judul' => $judul]);
+        return view('absen.edit', ['absen' => $absen,'pegawai' => $pegawai , 'judul' => $judul] , ["active" => "absen_aktif"]);
     }
     // update data absen
     public function update(Request $request)

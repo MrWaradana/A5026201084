@@ -1,5 +1,5 @@
 
-   @extends('layout.bahagia')
+   @extends('layout.main')
 
    @section('title', 'Mengedit Data Absensi')
    @section('judulhalaman', 'Edit Absensi Pegawai')
@@ -17,15 +17,15 @@
             @endforeach
         </select>
         <br>
-                <div class="form-group">
-                    <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
-                    <div class='col-sm-4 input-group date ' id='dtpickerdemo'>
-                        <input type='text' class="form-control" name="tanggal" value="{{ $a->Tanggal }}" required="required" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
+        <div class="form-group">
+            <label>Tanggal dan Waktu :</label>
+            <div class="input-group date" id="reservationdatetime" data-target-input="nearest">
+                <input type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime" name="tanggal" value="{{ $a ->Tanggal }}"/>
+                <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
+                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                 </div>
+            </div>
+        </div>
 
                 Status <br />
                 <input type="radio" id="Hadir" name="status" value="H" @if ($a->Status === "H" ) checked="checked" @endif>

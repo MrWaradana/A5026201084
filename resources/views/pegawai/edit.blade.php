@@ -1,4 +1,4 @@
-@extends('layout.bahagia')
+@extends('layout.main')
 
 @section('title', 'Edit Pegawai')
 @section('judulhalaman', 'Edit Data Pegawai')

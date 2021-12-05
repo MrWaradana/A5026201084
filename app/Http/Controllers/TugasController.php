@@ -13,7 +13,7 @@ class TugasController extends Controller
     	$tugas = DB::table('tugas')->get();
 
     	// mengirim data pegawai ke view index
-    	return view('tugas.index',['tugas' => $tugas]);
+    	return view('tugas.index',['tugas' => $tugas], ["active" => "tugas_aktif"] );
 
     }
     // method untuk menampilkan view form tambah pegawai
@@ -23,7 +23,7 @@ class TugasController extends Controller
         // mengambil data dari table pegawai
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
         // memanggil view tambah
-        return view('tugas.tambah', ['pegawai' => $pegawai] );
+        return view('tugas.tambah', ['pegawai' => $pegawai],  ["active" => "tugas_aktif"] );
 
     }
 
@@ -50,7 +50,7 @@ class TugasController extends Controller
         // mengambil data pegawai berdasarkan id yang dipilih
         $tugas = DB::table('tugas')->where('ID',$id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('tugas.edit',['tugas' => $tugas, 'pegawai' => $pegawai]);
+        return view('tugas.edit',['tugas' => $tugas, 'pegawai' => $pegawai],  ["active" => "tugas_aktif"]);
 
     }
 

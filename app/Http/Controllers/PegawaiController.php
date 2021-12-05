@@ -13,7 +13,7 @@ class PegawaiController extends Controller
     	$pegawai = DB::table('pegawai')->get();
 
     	// mengirim data pegawai ke view index
-    	return view('pegawai.index',['pegawai' => $pegawai]);
+    	return view('pegawai.index',['pegawai' => $pegawai],["active" => "pegawai_aktif"]);
 
     }
 
@@ -22,7 +22,7 @@ class PegawaiController extends Controller
     {
 
         // memanggil view tambah
-        return view('pegawai.tambah');
+        return view('pegawai.tambah', ["active" => "pegawai_aktif"]);
 
     }
 
@@ -47,7 +47,7 @@ class PegawaiController extends Controller
         // mengambil data pegawai berdasarkan id yang dipilih
         $pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('pegawai.edit',['pegawai' => $pegawai]);
+        return view('pegawai.edit',['pegawai' => $pegawai],["active" => "pegawai_aktif"]);
 
     }
 
