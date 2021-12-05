@@ -4,24 +4,11 @@
 @section('judulhalaman', 'Daftar Absensi Pegawai')
 
 @section('konten')
-	<a href="/absen/add"> + Tambah Absensi</a>
-
-	<br/>
-	<br/>
-
-	<table border="1">
-		<tr>
-
-
-		</tr>
-
-	</table>
-
 
         <div class="card">
             <div class="card-header d-flex">
-              <h3 class="card-title">DataTable with default features</h3>
-              <a href="/pegawai/tambah" class="ml-auto d-inline-block"> + Tambah Pegawai Baru</a>
+              <h3 class="card-title">Daftar Absensi Pegawai</h3>
+              <a href="/absen/add" class="ml-auto d-inline-block"> + Tambah Absensi</a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">

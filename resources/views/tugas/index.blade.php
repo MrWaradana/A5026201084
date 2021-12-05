@@ -9,7 +9,7 @@
 
     <div class="card">
         <div class="card-header d-flex">
-          <h3 class="card-title">DataTable with default features</h3>
+          <h3 class="card-title">Tabel Tugas</h3>
           <a href="/tugas/tambah" class="ml-auto d-inline-block"> + Tambah Tugas Baru</a>
         </div>
         <!-- /.card-header -->
