@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-header d-flex">
               <h3 class="card-title">Daftar Absensi Pegawai</h3>
-              <a href="/absen/add" class="ml-auto d-inline-block"> + Tambah Absensi</a>
+              <a href="/absen/add" class="ml-auto d-inline-block btn btn-info"> + Tambah Absensi</a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -29,9 +29,9 @@
                         <td>{{ $a->Tanggal }}</td>
                         <td>{{ $a->Status }}</td>
                         <td>
-                            <a href="/absen/edit/{{ $a->ID }}">Edit Absensi</a>
+                            <a href="/absen/edit/{{ $a->ID }}" class="btn btn-info">Edit Absensi</a>
                             |
-                            <a href="/absen/hapus/{{ $a->ID }}">Delete Absensi</a>
+                            <a href="/absen/hapus/{{ $a->ID }}" class="btn btn-info">Delete Absensi</a>
                         </td>
                     </tr>
                     @endforeach

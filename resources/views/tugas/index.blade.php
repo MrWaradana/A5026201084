@@ -10,7 +10,7 @@
     <div class="card">
         <div class="card-header d-flex">
           <h3 class="card-title">Tabel Tugas</h3>
-          <a href="/tugas/tambah" class="ml-auto d-inline-block"> + Tambah Tugas Baru</a>
+          <a href="/tugas/tambah" class="ml-auto d-inline-block btn btn-info"> + Tambah Tugas Baru</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -32,9 +32,9 @@
                     <td>{{ $t->NamaTugas }}</td>
                     <td>{{ $t->Status }}</td>
                     <td>
-                        <a href="/tugas/edit/{{ $t->ID }}">Edit</a>
+                        <a href="/tugas/edit/{{ $t->ID }}" class="btn btn-info">Edit</a>
                         |
-                        <a href="/tugas/hapus/{{ $t->ID }}">Hapus</a>
+                        <a href="/tugas/hapus/{{ $t->ID }}" class="btn btn-info">Hapus</a>
                     </td>
                 </tr>
                 @endforeach

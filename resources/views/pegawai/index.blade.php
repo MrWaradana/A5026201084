@@ -8,7 +8,7 @@
     <div class="card">
         <div class="card-header d-flex">
           <h3 class="card-title">Tabel Pegawai</h3>
-          <a href="/pegawai/tambah" class="ml-auto d-inline-block"> + Tambah Pegawai Baru</a>
+          <a href="/pegawai/tambah" class="ml-auto d-inline-block btn btn-info"> + Tambah Pegawai Baru</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -30,9 +30,9 @@
                     <td>{{ $p->pegawai_umur }}</td>
                     <td>{{ $p->pegawai_alamat }}</td>
                     <td>
-                        <a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+                        <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-info">Edit</a>
                         |
-                        <a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+                        <a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-info">Hapus</a>
                     </td>
                 </tr>
                 @endforeach
