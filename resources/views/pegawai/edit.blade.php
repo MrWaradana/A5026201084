@@ -5,19 +5,32 @@
 
 @section('konten')
 
-
-	@foreach($pegawai as $p)
-	<form action="/pegawai/update" method="post">
-		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
-		Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
-		Jabatan <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
-		Umur <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
-		Alamat <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
-	@endforeach
-
-    <h2><a href="/pegawai"> Kembali</a></h2>
-
+    <div class="container">
+        @foreach($pegawai as $p)
+        <form action="/pegawai/update" method="post">
+            {{ csrf_field() }}
+            <input type="hidden" name="id" value="{{ $p->pegawai_id }}">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" required="required" value="{{ $p->pegawai_nama }}">
+              </div>
+            <div class="form-group">
+                <label for="jabatan">Jabatan</label>
+                <input type="text" class="form-control" name="jabatan" id="jabatan" placeholder="Jabatan" required="required" value="{{ $p->pegawai_jabatan }}">
+            </div>
+            <div class="form-group">
+                <label for="umur">Umur</label>
+                <input type="text" class="form-control" name="umur" id="umur" placeholder="Umur" pattern="[0-9]*" required="required" title="masukkan angka saja!" value="{{ $p->pegawai_umur }}">
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea class="form-control" name="alamat" id="alamat" placeholder="Alamat" rows="3" required="required">{{ $p->pegawai_alamat }}</textarea>
+            </div>
+            <div class="form-group d-flex justify-content-between mt-4">
+                <a href="/pegawai" class="btn btn-danger"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data </button>
+            </div>
+          </form>
+          @endforeach
+        </div>
 @endsection
