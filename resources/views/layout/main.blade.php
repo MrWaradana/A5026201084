@@ -237,6 +237,22 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/tugas" class="nav-link disabled">
+              <i class="nav-icon fas fa-sync"></i>
+              <p>
+                Coming soon!
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/tugas" class="nav-link disabled">
+              <i class="nav-icon fas fa-sync"></i>
+              <p>
+                Coming soon!
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
