@@ -32,9 +32,9 @@
                     <td>{{ $t->NamaTugas }}</td>
                     <td>{{ $t->Status }}</td>
                     <td>
-                        <a href="/tugas/edit/{{ $t->ID }}" class="btn btn-info">Edit</a>
+                        <a href="/tugas/edit/{{ $t->ID }}" class="btn btn-warning"><i class="fa fa-wrench" aria-hidden="true"></i> Edit</a>
                         |
-                        <a href="/tugas/hapus/{{ $t->ID }}" class="btn btn-info">Hapus</a>
+                        <a href="/tugas/hapus/{{ $t->ID }}" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i> Delete</a>
                     </td>
                 </tr>
                 @endforeach

@@ -29,9 +29,9 @@
                         <td>{{ $a->Tanggal }}</td>
                         <td>{{ $a->Status }}</td>
                         <td>
-                            <a href="/absen/edit/{{ $a->ID }}" class="btn btn-info">Edit Absensi</a>
+                            <a href="/absen/edit/{{ $a->ID }}" class="btn btn-warning"><i class="fa fa-wrench" aria-hidden="true"></i> Edit</a>
                             |
-                            <a href="/absen/hapus/{{ $a->ID }}" class="btn btn-info">Delete Absensi</a>
+                            <a href="/absen/hapus/{{ $a->ID }}" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i> Delete</a>
                         </td>
                     </tr>
                     @endforeach

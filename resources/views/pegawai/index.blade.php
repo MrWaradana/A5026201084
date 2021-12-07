@@ -30,9 +30,9 @@
                     <td>{{ $p->pegawai_umur }}</td>
                     <td>{{ $p->pegawai_alamat }}</td>
                     <td>
-                        <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-info">Edit</a>
+                        <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning"><i class="fa fa-wrench" aria-hidden="true"></i> Edit</a>
                         |
-                        <a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-info">Hapus</a>
+                        <a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i> Delete</a>
                     </td>
                 </tr>
                 @endforeach
