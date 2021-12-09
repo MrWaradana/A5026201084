@@ -15,7 +15,7 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>IDPegawai</th>
+                    <th>Nama Pegawai</th>
                     <th>Tanggal</th>
                     <th>Status</th>
                     <th>Opsi</th>
@@ -25,7 +25,7 @@
                     @foreach($absen as $a)
                     <tr>
 
-                        <td>{{ $a->IDPegawai }}</td>
+                        <td>{{ $a->pegawai_nama }}</td>
                         <td>{{ $a->Tanggal }}</td>
                         <td>{{ $a->Status }}</td>
                         <td>
@@ -38,13 +38,16 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                    <th>IDPegawai</th>
+                    <th>Nama Pegawai</th>
                     <th>Tanggal</th>
                     <th>Status</th>
                     <th>Opsi</th>
                 </tr>
                 </tfoot>
               </table>
+
+              {{ $absen->links() }}
+
               <p class="pt-1">
                 Keterangan Status: <br>
                 H : Hadir <br>
