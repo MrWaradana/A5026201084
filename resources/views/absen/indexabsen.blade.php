@@ -61,7 +61,7 @@
           <!-- /.card -->
  @endsection
 
- @section('script')
+ {{-- @section('script')
  <script type="text/javascript">
      $(function () {
          $("#example1").DataTable({
@@ -70,4 +70,4 @@
          }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
      });
  </script>
-@endsection
+@endsection --}}

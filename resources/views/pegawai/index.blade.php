@@ -12,13 +12,13 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <div class="container" align="center">
-                <form action="/pegawai/cari" method="GET">
+            <div class="container-fluid">
+                <form action="/pegawai/cari" class="d-flex justify-content-between mb-4" method="GET">
                     <input type="text" class="form-control" name="cari" placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
                     <input type="submit" class="btn btn-default" value="CARI">
                 </form>
             </div>
-          <table id="example1" class="table table-bordered table-striped">
+          <table id="example1" class="table table-bordered table-striped mb-4">
             <thead>
             <tr>
                 <th>Nama</th>
@@ -55,7 +55,9 @@
             </tr>
             </tfoot>
           </table>
-          {{ $pegawai->links() }}
+          <div class="container-fluid d-flex justify-content-start">
+              {{ $pegawai->links() }}
+          </div>
 
         </div>
         <!-- /.card-body -->
@@ -63,7 +65,7 @@
       <!-- /.card -->
 @endsection
 
-@section('script')
+{{-- @section('script')
     <script type="text/javascript">
         $(function () {
             $("#example1").DataTable({
@@ -72,4 +74,4 @@
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         });
     </script>
-@endsection
+@endsection --}}
