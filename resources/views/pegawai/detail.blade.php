@@ -1,7 +1,7 @@
 @extends('layout.main')
 
-@section('title', 'Edit Pegawai')
-@section('judulhalaman', 'Edit Data Pegawai')
+@section('title', 'Detail Pegawai')
+@section('judulhalaman', 'Detail Data Pegawai')
 
 @section('konten')
 
