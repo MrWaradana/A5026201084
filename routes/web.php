@@ -69,3 +69,12 @@ Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
 
 
+//route CRUD bus
+Route::get('/bus','BusController@index');
+Route::get('/bus/tambah','BusController@tambah');
+Route::post('/bus/store','BusController@store');
+Route::get('/bus/edit/{id}','BusController@edit');
+Route::post('/bus/update','BusController@update');
+Route::get('/bus/hapus/{id}','BusController@hapus');
+Route::get('/bus/cari','BusController@cari');
+Route::get('/bus/view/{id}','BusController@detail');

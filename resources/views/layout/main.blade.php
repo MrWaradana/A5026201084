@@ -238,10 +238,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/tugas" class="nav-link disabled">
-              <i class="nav-icon fas fa-sync"></i>
+            <a href="/bus" class="nav-link {{  ($active === "bus_aktif") ? 'active' : ''  }}">
+              <i class="nav-icon fas fa-bus"></i>
               <p>
-                Coming soon!
+                Bus | Praktikum
               </p>
             </a>
           </li>
