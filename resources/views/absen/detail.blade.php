@@ -21,7 +21,7 @@
                 <p>{{ $a->Status }}</p>
             </div>
             <p class="pt-1">
-                Keterangan Status: <br>
+               <label> Keterangan Status: </label><br>
                 H : Hadir <br>
                 I : Izin <br>
                 S : Sakit <br>

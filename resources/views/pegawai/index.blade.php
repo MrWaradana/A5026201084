@@ -59,7 +59,7 @@
                     </tr>
                 </tfoot>
             </table>
-            <div class="container-fluid d-flex justify-content-start">
+            <div class="container-fluid">
                 {{ $pegawai->links() }}
             </div>
 

@@ -14,7 +14,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-          <table id="example1" class="table table-bordered table-striped">
+          <table id="example1" class="table table-bordered table-striped mb-4">
             <thead>
             <tr>
                 <th>Nama Pegawai</th>
@@ -32,6 +32,9 @@
                     <td>{{ $t->NamaTugas }}</td>
                     <td>{{ $t->Status }}</td>
                     <td>
+                        <a href="/tugas/view/{{ $t->ID }}" class="btn btn-info"><i
+                            class="fa fa-exclamation-circle" aria-hidden="true"></i> View Detail</a>
+                        |
                         <a href="/tugas/edit/{{ $t->ID }}" class="btn btn-warning"><i class="fa fa-wrench" aria-hidden="true"></i> Edit</a>
                         |
                         <a href="/tugas/hapus/{{ $t->ID }}" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i> Delete</a>
@@ -49,6 +52,9 @@
             </tr>
             </tfoot>
           </table>
+          <div class="container-fluid">
+              {{ $tugas->links() }}
+          </div>
           <p class="pt-1">
             Keterangan Status: <br>
             B : Belum <br>

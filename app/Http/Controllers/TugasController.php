@@ -13,7 +13,7 @@ class TugasController extends Controller
         $tugas = DB::table('tugas')
             ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
             ->select('tugas.*', 'pegawai.pegawai_nama')
-            ->paginate();
+            ->paginate(5);
 
         // mengirim data pegawai ke view index
         return view('tugas.index', ['tugas' => $tugas], ["active" => "tugas_aktif"]);
@@ -57,14 +57,14 @@ class TugasController extends Controller
     public function detail($id)
     {
         // mengambil data bus berdasarkan id yang dipilih
-        $absen = DB::table('absen')
-            ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
-            ->select('absen.*', 'pegawai.pegawai_nama')
+        $tugas = DB::table('tugas')
+            ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('tugas.*', 'pegawai.pegawai_nama')
             ->where('ID', $id)
             ->get();
 
         // passing data bus yang didapat ke view edit.blade.php
-        return view('absen.detail', ['absen' => $absen], ["active" => "absen_aktif"]);
+        return view('tugas.detail', ['tugas' => $tugas], ["active" => "tugas_aktif"]);
     }
 
     // update data pegawai

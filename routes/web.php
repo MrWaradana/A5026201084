@@ -58,6 +58,7 @@ Route::post('/tugas/store','TugasController@store');
 Route::get('/tugas/edit/{id}','TugasController@edit');
 Route::post('/tugas/update','TugasController@update');
 Route::get('/tugas/hapus/{id}','TugasController@hapus');
+Route::get('/tugas/view/{id}','TugasController@detail');
 
 
 //route CRUD absen

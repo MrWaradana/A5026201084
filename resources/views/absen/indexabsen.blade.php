@@ -12,7 +12,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="example1" class="table table-bordered table-striped mb-4">
                 <thead>
                 <tr>
                     <th>Nama Pegawai</th>
@@ -47,8 +47,9 @@
                 </tr>
                 </tfoot>
               </table>
-
-              {{ $absen->links() }}
+              <div class="container-fluid">
+                  {{ $absen->links() }}
+              </div>
 
               <p class="pt-1">
                 Keterangan Status: <br>
