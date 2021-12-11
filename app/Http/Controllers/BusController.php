@@ -66,6 +66,7 @@ class BusController extends Controller
 
     }
 
+    //method untuk detail data bus
     public function detail($id)
     {
         // mengambil data bus berdasarkan id yang dipilih

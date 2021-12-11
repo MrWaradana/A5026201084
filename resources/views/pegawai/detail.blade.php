@@ -5,8 +5,8 @@
 
 @section('konten')
 
-    <div class="container">
-        @foreach($pegawai as $p)
+    <div class="container-fluid">
+        @foreach ($pegawai as $p)
 
 
             <div class="form-group">
@@ -29,6 +29,6 @@
                 <a href="/pegawai" class="btn btn-danger"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
 
-          @endforeach
-        </div>
+        @endforeach
+    </div>
 @endsection

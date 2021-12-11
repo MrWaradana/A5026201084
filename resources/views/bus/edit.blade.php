@@ -20,11 +20,11 @@
             </div>
             <p><strong>Tersedia</strong></p>
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="ya" name="tersedia" class="custom-control-input" value="H" @if ($b->tersedia === "Y" ) checked="checked" @endif>
+                <input type="radio" id="ya" name="tersedia" class="custom-control-input" value="Y" @if ($b->tersedia === "Y" ) checked="checked" @endif>
                 <label class="custom-control-label" for="ya">Ya</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="tidak" name="tersedia" class="custom-control-input" value="I" @if ($b->tersedia === "T" ) checked="checked" @endif>
+                <input type="radio" id="tidak" name="tersedia" class="custom-control-input" value="T" @if ($b->tersedia === "T" ) checked="checked" @endif>
                 <label class="custom-control-label" for="tidak">Tidak</label>
             </div>
             <div class="form-group d-flex justify-content-between mt-4">

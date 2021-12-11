@@ -17,7 +17,7 @@
           <table id="example1" class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th>IDPegawai</th>
+                <th>Nama Pegawai</th>
                 <th>Tanggal dan Waktu</th>
                 <th>NamaTugas</th>
                 <th>Status</th>
@@ -27,7 +27,7 @@
             <tbody>
                 @foreach($tugas as $t)
                 <tr>
-                    <td>{{ $t->IDPegawai }}</td>
+                    <td>{{ $t->pegawai_nama }}</td>
                     <td>{{ $t->Tanggal }}</td>
                     <td>{{ $t->NamaTugas }}</td>
                     <td>{{ $t->Status }}</td>
@@ -41,7 +41,7 @@
             </tbody>
             <tfoot>
             <tr>
-                <th>IDPegawai</th>
+                <th>Nama Pegawai</th>
                 <th>Tanggal dan Waktu</th>
                 <th>NamaTugas</th>
                 <th>Status</th>

@@ -12,7 +12,7 @@
             {{ csrf_field() }}
             <input type="hidden" name="id" value="{{ $t->ID }}">
             <div class="form-group">
-                <label for="IDPegawai">IDPegawai:</label>
+                <label for="IDPegawai">Nama Pegawai:</label>
                 <select name="IDPegawai" id="IDPegawai" class="form-control">
                     @foreach($pegawai as $p)
                      <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $t->IDPegawai ) selected="selected" @endif>{{ $p->pegawai_nama }}</option>
