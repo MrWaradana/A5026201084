@@ -15,9 +15,9 @@ class AbsenController extends Controller
 
         // join table absen ==> table pegawai
         $absen = DB::table('absen')
-        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
-        ->select('absen.*', 'pegawai.pegawai_nama')
-        ->paginate();
+            ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('absen.*', 'pegawai.pegawai_nama')
+            ->paginate();
 
         // mengirim data absen ke view indexabsen
         return view('absen.indexabsen', ['absen' => $absen], ["active" => "absen_aktif"]);
@@ -53,8 +53,23 @@ class AbsenController extends Controller
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
 
         // passing data absen yang didapat ke view update.blade.php
-        return view('absen.edit', ['absen' => $absen,'pegawai' => $pegawai] , ["active" => "absen_aktif"]);
+        return view('absen.edit', ['absen' => $absen, 'pegawai' => $pegawai], ["active" => "absen_aktif"]);
     }
+
+    //method untuk detail data absen
+    public function detail($id)
+    {
+        // mengambil data bus berdasarkan id yang dipilih
+        $absen = DB::table('absen')
+        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+        ->where('ID',$id)
+        ->get();
+
+        // passing data bus yang didapat ke view edit.blade.php
+        return view('absen.detail', ['absen' => $absen], ["active" => "absen_aktif"]);
+    }
+
     // update data absen
     public function update(Request $request)
     {

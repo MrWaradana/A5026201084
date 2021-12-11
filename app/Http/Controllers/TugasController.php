@@ -9,25 +9,26 @@ class TugasController extends Controller
 {
     public function index()
     {
-    	// mengambil data dari table pegawai
-    	$tugas = DB::table('tugas')->get();
+        // mengambil data dari table pegawai
+        $tugas = DB::table('tugas')
+            ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('tugas.*', 'pegawai.pegawai_nama')
+            ->paginate();
 
-    	// mengirim data pegawai ke view index
-    	return view('tugas.index',['tugas' => $tugas], ["active" => "tugas_aktif"] );
-
+        // mengirim data pegawai ke view index
+        return view('tugas.index', ['tugas' => $tugas], ["active" => "tugas_aktif"]);
     }
     // method untuk menampilkan view form tambah pegawai
     public function tambah()
     {
-
         // mengambil data dari table pegawai
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
-        // memanggil view tambah
-        return view('tugas.tambah', ['pegawai' => $pegawai],  ["active" => "tugas_aktif"] );
 
+        // memanggil view tambah
+        return view('tugas.tambah', ['pegawai' => $pegawai],  ["active" => "tugas_aktif"]);
     }
 
-    // method untuk insert data ke table pegawai
+    // method untuk insert data ke table tugas
     public function store(Request $request)
     {
         // insert data ke table pegawai
@@ -37,28 +38,40 @@ class TugasController extends Controller
             'NamaTugas' => $request->NamaTugas,
             'Status' => $request->Status
         ]);
-        // alihkan halaman ke halaman pegawai
+        // alihkan halaman ke halaman tugas
         return redirect('/tugas');
-
     }
 
-    // method untuk edit data pegawai
+    // method untuk edit data tugas
     public function edit($id)
     {
         // mengambil data dari table pegawai
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
-        // mengambil data pegawai berdasarkan id yang dipilih
-        $tugas = DB::table('tugas')->where('ID',$id)->get();
+        // mengambil data tugas berdasarkan id yang dipilih
+        $tugas = DB::table('tugas')->where('ID', $id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('tugas.edit',['tugas' => $tugas, 'pegawai' => $pegawai],  ["active" => "tugas_aktif"]);
+        return view('tugas.edit', ['tugas' => $tugas, 'pegawai' => $pegawai],  ["active" => "tugas_aktif"]);
+    }
 
+    //method untuk detail data tugas
+    public function detail($id)
+    {
+        // mengambil data bus berdasarkan id yang dipilih
+        $absen = DB::table('absen')
+            ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('absen.*', 'pegawai.pegawai_nama')
+            ->where('ID', $id)
+            ->get();
+
+        // passing data bus yang didapat ke view edit.blade.php
+        return view('absen.detail', ['absen' => $absen], ["active" => "absen_aktif"]);
     }
 
     // update data pegawai
     public function update(Request $request)
     {
         // update data pegawai
-        DB::table('tugas')->where('ID',$request->id)->update([
+        DB::table('tugas')->where('ID', $request->id)->update([
             'IDPegawai' => $request->IDPegawai,
             'Tanggal' => $request->Tanggal,
             'NamaTugas' => $request->NamaTugas,
@@ -72,7 +85,7 @@ class TugasController extends Controller
     public function hapus($id)
     {
         // menghapus data pegawai berdasarkan id yang dipilih
-        DB::table('tugas')->where('ID',$id)->delete();
+        DB::table('tugas')->where('ID', $id)->delete();
 
         // alihkan halaman ke halaman pegawai
         return redirect('/tugas');
