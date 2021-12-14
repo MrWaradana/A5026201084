@@ -18,6 +18,24 @@ class TugasController extends Controller
         // mengirim data pegawai ke view index
         return view('tugas.index', ['tugas' => $tugas], ["active" => "tugas_aktif"]);
     }
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    		// mengambil data dari table bus sesuai pencarian data
+		$tugas = DB::table('tugas')
+        ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('tugas.*', 'pegawai.pegawai_nama')
+		->where('pegawai_nama','like',"%".$cari."%")
+		->paginate();
+
+    		// mengirim data bus ke view index
+		return view('tugas.index',['tugas' => $tugas],["active" => "tugas_aktif"]);
+
+	}
+
     // method untuk menampilkan view form tambah pegawai
     public function tambah()
     {

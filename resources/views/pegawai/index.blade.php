@@ -16,7 +16,7 @@
                 <form action="/pegawai/cari" class="d-flex justify-content-between mb-4" method="GET">
                     <input type="text" class="form-control" name="cari"
                         placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
-                    <input type="submit" class="btn btn-default" value="CARI">
+                        <button type="submit" class="btn btn-default d-inline"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </div>
             <table id="example1" class="table table-bordered table-striped mb-4">
