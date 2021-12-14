@@ -25,7 +25,7 @@
             <tr>
                 <th>Nama Pegawai</th>
                 <th>Tanggal dan Waktu</th>
-                <th>NamaTugas</th>
+                <th>Nama Tugas</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
