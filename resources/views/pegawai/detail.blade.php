@@ -8,23 +8,24 @@
     <div class="container-fluid">
         @foreach ($pegawai as $p)
 
-
-            <div class="form-group">
+        <ul class="list-group">
+            <li class="list-group-item">
                 <label for="nama">Nama</label>
                 <p>{{ $p->pegawai_nama }}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="jabatan">Jabatan</label>
                 <p>{{ $p->pegawai_jabatan }}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="umur">Umur</label>
                 <p>{{ $p->pegawai_umur }}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="alamat">Alamat</label>
                 <p>{{ $p->pegawai_alamat }}</p>
-            </div>
+            </li>
+        </ul>
             <div class="form-group d-flex justify-content-between mt-4">
                 <a href="/pegawai" class="btn btn-danger"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>

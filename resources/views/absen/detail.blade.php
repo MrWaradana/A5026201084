@@ -7,19 +7,20 @@
 
     <div class="container-fluid">
         @foreach ($absen as $a)
-
-            <div class="form-group">
+        <ul class="list-group">
+            <li class="list-group-item">
                 <label for="pegawai_nama">Nama Pegawai</label>
                 <p>{{ $a->pegawai_nama}}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="tanggal">Tanggal</label>
                 <p>{{ $a->Tanggal }}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="status">Status</label>
                 <p>{{ $a->Status }}</p>
-            </div>
+            </li>
+        </ul>
             <p class="pt-1">
                <label> Keterangan Status: </label><br>
                 H : Hadir <br>

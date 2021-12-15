@@ -31,7 +31,7 @@
                 @foreach($bus as $b)
                 <tr>
                     <td>{{ $b->merkbus }}</td>
-                    <td>{{ $b->jumlahbus }}</td>
+                    <td>{{ number_format($b->jumlahbus,0,',','.') }}</td>
                     <td>{{ $b->tersedia }}</td>
                     <td>
                         <a href="/bus/view/{{ $b->kodebus }}" class="btn btn-info"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> View Detail</a>

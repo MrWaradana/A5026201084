@@ -8,19 +8,20 @@
     <div class="container-fluid">
         @foreach ($bus as $b)
 
-
-            <div class="form-group">
+        <ul class="list-group">
+            <li class="list-group-item">
                 <label for="merkbus">Merk Bus</label>
                 <p>{{ $b->merkbus }}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="jumlahbus">Jumlah Bus</label>
-                <p>{{ $b->jumlahbus }}</p>
-            </div>
-            <div class="form-group">
+                <p>{{ number_format($b->jumlahbus,0,',','.') }}</p>
+            </li>
+            <li class="list-group-item">
                 <label for="tersedia">Tersedia</label>
                 <p>{{ $b->tersedia }}</p>
-            </div>
+            </li>
+        </ul>
             <p class="pt-1">
                 <label>Keterangan Tersedia:</label> <br>
                 Y : Ya <br>

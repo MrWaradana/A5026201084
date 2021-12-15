@@ -7,23 +7,24 @@
 
     <div class="container-fluid">
         @foreach ($tugas as $t)
-
-            <div class="form-group">
+        <ul class="list-group">
+            <li class="list-group-item">
                 <label for="pegawai_nama">Nama Pegawai :</label>
                 <p>{{ $t->pegawai_nama}}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="tanggal">Tanggal dan Waktu :</label>
                 <p>{{ $t->Tanggal }}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="namatugas">Nama Tugas :</label>
                 <p>{{ $t->NamaTugas }}</p>
-            </div>
-            <div class="form-group">
+            </li>
+            <li class="list-group-item">
                 <label for="status">Status :</label>
                 <p>{{ $t->Status }}</p>
-            </div>
+            </li>
+        </ul>
             <p class="pt-1">
                <label> Keterangan Status: </label><br>
                 H : Hadir <br>

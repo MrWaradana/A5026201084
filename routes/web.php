@@ -82,3 +82,13 @@ Route::post('/bus/update','BusController@update');
 Route::get('/bus/hapus/{id}','BusController@hapus');
 Route::get('/bus/cari','BusController@cari');
 Route::get('/bus/view/{id}','BusController@detail');
+
+//route CRUD karyawan
+Route::get('/karyawan','KaryawanController@index');
+Route::get('/karyawan/tambah','KaryawanController@tambah');
+Route::post('/karyawan/store','KaryawanController@store');
+Route::get('/karyawan/edit/{id}','KaryawanController@edit');
+Route::post('/karyawan/update','KaryawanController@update');
+Route::get('/karyawan/hapus/{id}','KaryawanController@hapus');
+Route::get('/karyawan/cari','KaryawanController@cari');
+Route::get('/karyawan/view/{id}','KaryawanController@detail');
