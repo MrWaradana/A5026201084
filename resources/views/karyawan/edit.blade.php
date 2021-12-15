@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label for="Gaji">Gaji</label>
-                <input type="text" class="form-control" name="Gaji" id="Gaji" placeholder="Gaji" required="required" title="masukkan angka saja!" value="{{ $k->Gaji }}" maxlength="5" pattern="[0-9]*" title="masukkan angka saja!">
+                <input type="text" class="form-control" name="Gaji" id="Gaji" placeholder="Gaji" required="required" title="masukkan angka saja!" value="{{ $k->Gaji }}" maxlength="11" pattern="[0-9]*" title="masukkan angka saja!">
             </div>
             <div class="form-group d-flex justify-content-between mt-4">
                 <a href="/karyawan" class="btn btn-danger"><i class="fas fa-arrow-left"></i> Kembali</a>
